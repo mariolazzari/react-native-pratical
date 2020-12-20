@@ -11,7 +11,7 @@ const GoalInput = props => {
 
   const addGoalHandler = () => {
     props.onAddGoal(enteredGoal);
-    setEn + teredGoal("");
+    setEnteredGoal("");
   };
 
   return (
