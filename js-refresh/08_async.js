@@ -28,7 +28,7 @@ const fetchPromise = () => {
 
 fetchPromise()
   .then(text => {
-    return fetchPromise();
+    return fetchPromise(text);
   })
   .then(text => console.log("Promise", text));
 
