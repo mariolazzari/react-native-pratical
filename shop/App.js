@@ -1,12 +1,12 @@
-import React from "react";
-import { createStore, combineReducers } from "redux";
-import { Provider } from "react-redux";
+import React from 'react';
+import { createStore, combineReducers } from 'redux';
+import { Provider } from 'react-redux';
 
-import productsReducer from "./store/reducers/products";
-import ShopNavigator from "./navigation/ShopNavigator";
+import productsReducer from './store/reducers/products';
+import ShopNavigator from './navigation/ShopNavigator';
 
 const rootReducer = combineReducers({
-  products: productsReducer,
+  products: productsReducer
 });
 
 const store = createStore(rootReducer);
