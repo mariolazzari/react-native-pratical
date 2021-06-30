@@ -1,20 +1,20 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import {
   ScrollView,
   View,
   Button,
   Text,
   TextInput,
-  StyleSheet
-} from 'react-native';
-import { useDispatch } from 'react-redux';
+  StyleSheet,
+} from "react-native";
+import { useDispatch } from "react-redux";
 
-import Colors from '../constants/Colors';
-import * as placesActions from '../store/places-actions';
-import ImagePicker from '../components/ImagePicker';
+import Colors from "../constants/Colors";
+import * as placesActions from "../store/places-actions";
+import ImagePicker from "../components/ImagePicker";
 
 const NewPlaceScreen = props => {
-  const [titleValue, setTitleValue] = useState('');
+  const [titleValue, setTitleValue] = useState("");
   const [selectedImage, setSelectedImage] = useState();
 
   const dispatch = useDispatch();
@@ -25,7 +25,7 @@ const NewPlaceScreen = props => {
   };
 
   const imageTakenHandler = imagePath => {
-      setSelectedImage(imagePath);
+    setSelectedImage(imagePath);
   };
 
   const savePlaceHandler = () => {
@@ -54,24 +54,24 @@ const NewPlaceScreen = props => {
 };
 
 NewPlaceScreen.navigationOptions = {
-  headerTitle: 'Add Place'
+  headerTitle: "Add Place",
 };
 
 const styles = StyleSheet.create({
   form: {
-    margin: 30
+    margin: 30,
   },
   label: {
     fontSize: 18,
-    marginBottom: 15
+    marginBottom: 15,
   },
   textInput: {
-    borderBottomColor: '#ccc',
+    borderBottomColor: "#ccc",
     borderBottomWidth: 1,
     marginBottom: 15,
     paddingVertical: 4,
-    paddingHorizontal: 2
-  }
+    paddingHorizontal: 2,
+  },
 });
 
 export default NewPlaceScreen;
